@@ -6,7 +6,6 @@ URL:		http://kitenet.net/programs/code/alien
 Source:		http://ftp.debian.org/debian/pool/main/a/alien/alien_%version.tar.bz2
 License:	GPL
 Group:		Archiving/Other
-Buildroot:	%_tmppath/%name-buildroot
 Requires:	perl, dpkg
 BuildRequires:	perl-devel
 BuildArch: noarch
