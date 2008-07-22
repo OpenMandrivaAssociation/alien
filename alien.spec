@@ -1,7 +1,7 @@
 Summary:	Install Debian and Slackware Packages with RPM
 Name:		alien
 Version:	8.64
-Release:	%mkrel 1
+Release:	%mkrel 3
 URL:		http://kitenet.net/programs/code/alien
 Source:		http://ftp.debian.org/debian/pool/main/a/alien/alien_%version.tar.bz2
 License:	GPL
