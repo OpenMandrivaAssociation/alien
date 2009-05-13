@@ -4,6 +4,7 @@ Version:	8.74
 Release:	%mkrel 1
 URL:		http://kitenet.net/programs/code/alien
 Source:		http://ftp.debian.org/debian/pool/main/a/alien/alien_%version.tar.gz
+Patch0:		alien_8.74-do-not-own-sys-directories.diff
 License:	GPLv2+
 Group:		Archiving/Other
 Buildroot:	%_tmppath/%name-buildroot
@@ -20,6 +21,7 @@ it to your preferred package format and install it.
 
 %prep
 %setup -q -n alien
+%patch0 -p0
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
