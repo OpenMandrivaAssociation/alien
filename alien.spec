@@ -8,7 +8,7 @@ Patch0:		alien_8.74-do-not-own-sys-directories.diff
 License:	GPLv2+
 Group:		Archiving/Other
 Buildroot:	%_tmppath/%name-buildroot
-Requires:	perl, dpkg
+Requires:	perl, dpkg >= 1.13.26
 BuildRequires:	perl-devel
 BuildArch: noarch
 
