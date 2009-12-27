@@ -28,7 +28,6 @@ it to your preferred package format and install it.
 perl -pi -e 's/: :\s*extra_/:: extra_/' Makefile
 
 %make
-chmod 644 $RPM_BUILD_DIR/alien/patches/j2sdk*
 
 %install
 %makeinstall_std VARPREFIX=%buildroot PREFIX=%buildroot%_prefix
