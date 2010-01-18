@@ -30,6 +30,7 @@ perl -pi -e 's/: :\s*extra_/:: extra_/' Makefile
 %make
 
 %install
+rm -rf $RPM_BUILD_ROOT
 %makeinstall_std VARPREFIX=%buildroot PREFIX=%buildroot%_prefix
 
 
