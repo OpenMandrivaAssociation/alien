@@ -1,8 +1,8 @@
 Summary:	Install Debian and Slackware Packages with RPM
 Name:		alien
 Version:	8.79
-Release:	%mkrel 1
-URL:		http://kitenet.net/programs/code/alien
+Release:	%mkrel 2
+URL:		http://sourceforge.net/projects/alien/
 Source:		http://ftp.debian.org/debian/pool/main/a/alien/alien_%version.tar.gz
 Patch0:		alien_8.74-do-not-own-sys-directories.diff
 License:	GPLv2+
@@ -20,7 +20,7 @@ you have installed on your system, you can use alien to convert
 it to your preferred package format and install it.
 
 %prep
-%setup -q -n alien
+%setup -q -n %name
 %patch0 -p0
 
 %build
@@ -33,6 +33,8 @@ perl -pi -e 's/: :\s*extra_/:: extra_/' Makefile
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std VARPREFIX=%buildroot PREFIX=%buildroot%_prefix
 
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files 
 %defattr(-,root,root)
@@ -42,8 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/alien/patches
 %{perl_vendorlib}/Alien
 /var/lib/alien
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 
