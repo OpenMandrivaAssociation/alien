@@ -1,6 +1,6 @@
 Summary:	Install Debian and Slackware Packages with RPM
 Name:		alien
-Version:	8.86
+Version:	8.87
 Release:	1
 URL:		http://sourceforge.net/projects/alien/
 Source:		http://ftp.debian.org/debian/pool/main/a/alien/%{name}_%version.tar.gz
@@ -19,7 +19,7 @@ it to your preferred package format and install it.
 
 %package -n perl-Alien
 Summary:        Alien Perl modules
-Requires:	perl-base = %{perl_version}
+Requires:	perl-base
 
 %description -n perl-Alien
 Alien is a program that converts between the rpm (Mandriva, Redhat ),
