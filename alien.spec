@@ -2,8 +2,8 @@ Summary:	Install Debian and Slackware Packages with RPM
 Name:		alien
 Version:	8.87
 Release:	2
-URL:		http://sourceforge.net/projects/alien/
-Source:		http://ftp.debian.org/debian/pool/main/a/alien/%{name}_%version.tar.gz
+URL:            http://kitenet.net/~joey/code/alien/
+Source:         http://ftp.debian.org/debian/pool/main/a/alien/%{name}_%{version}.tar.gz
 License:	GPLv2+
 Group:		Archiving/Other
 Requires:	perl, dpkg >= 1.13.26, rpm-build
