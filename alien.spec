@@ -29,7 +29,7 @@ you have installed on your system, you can use alien to convert
 it to your preferred package format and install it.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
