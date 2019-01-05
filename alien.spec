@@ -41,12 +41,10 @@ perl -pi -e 's/: :\s*extra_/:: extra_/' Makefile
 %makeinstall_std VARPREFIX=%buildroot PREFIX=%buildroot%_prefix
 
 %files 
-%defattr(-,root,root)
-%_bindir/*
-%dir %_datadir/alien
-%_mandir/*/*
-%{_datadir}/alien/patches
-/var/lib/alien
+%{_bindir}/*
+%{_mandir}/*/*
+%{perl_vendorlib}/Alien
+
 %doc README TODO
 
 %files -n perl-Alien
