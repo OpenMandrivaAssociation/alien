@@ -1,6 +1,6 @@
 Summary:	Install Debian and Slackware Packages with RPM
 Name:		alien
-Version:	8.93
+Version:	8.95
 Release:	1
 URL:		http://kitenet.net/~joey/code/alien/
 Source0:	http://ftp.debian.org/debian/pool/main/a/alien/%{name}_%{version}.tar.gz
@@ -114,10 +114,10 @@ perl -pi -e 's/: :\s*extra_/:: extra_/' Makefile
     - restore BuildRoot
 
 
-* Mon Nov 06 2006 Götz Waschk <waschk@mandriva.org> 8.64-1mdv2007.0
+* Mon Nov 06 2006 GÃ¶tz Waschk <waschk@mandriva.org> 8.64-1mdv2007.0
 + Revision: 77021
 - Import alien
 
-* Mon Nov 06 2006 G�tz Waschk <waschk@mandriva.org> 8.64-1mdv2007.1
+* Mon Nov 06 2006 Götz Waschk <waschk@mandriva.org> 8.64-1mdv2007.1
 - new version
 
