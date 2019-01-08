@@ -1,6 +1,6 @@
 Summary:	Install Debian and Slackware Packages with RPM
 Name:		alien
-Version:	8.93
+Version:	8.95
 Release:	1
 URL:		http://kitenet.net/~joey/code/alien/
 Source0:	http://ftp.debian.org/debian/pool/main/a/alien/%{name}_%{version}.tar.gz
@@ -29,7 +29,7 @@ you have installed on your system, you can use alien to convert
 it to your preferred package format and install it.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -41,12 +41,10 @@ perl -pi -e 's/: :\s*extra_/:: extra_/' Makefile
 %makeinstall_std VARPREFIX=%buildroot PREFIX=%buildroot%_prefix
 
 %files 
-%defattr(-,root,root)
-%_bindir/*
-%dir %_datadir/alien
-%_mandir/*/*
-%{_datadir}/alien/patches
-/var/lib/alien
+%{_bindir}/*
+%{_mandir}/*/*
+%{perl_vendorlib}/Alien
+
 %doc README TODO
 
 %files -n perl-Alien
@@ -114,10 +112,10 @@ perl -pi -e 's/: :\s*extra_/:: extra_/' Makefile
     - restore BuildRoot
 
 
-* Mon Nov 06 2006 Götz Waschk <waschk@mandriva.org> 8.64-1mdv2007.0
+* Mon Nov 06 2006 GÃ¶tz Waschk <waschk@mandriva.org> 8.64-1mdv2007.0
 + Revision: 77021
 - Import alien
 
-* Mon Nov 06 2006 G�tz Waschk <waschk@mandriva.org> 8.64-1mdv2007.1
+* Mon Nov 06 2006 Götz Waschk <waschk@mandriva.org> 8.64-1mdv2007.1
 - new version
 
