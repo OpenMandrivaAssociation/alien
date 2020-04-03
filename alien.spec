@@ -1,9 +1,9 @@
 Summary:	Install Debian and Slackware Packages with RPM
 Name:		alien
-Version:	8.95
+Version:	8.95.1
 Release:	1
 URL:		http://kitenet.net/~joey/code/alien/
-Source0:	http://ftp.debian.org/debian/pool/main/a/alien/%{name}_%{version}.tar.gz
+Source0:	http://ftp.debian.org/debian/pool/main/a/alien/%{name}_%{version}.tar.xz
 License:	GPLv2+
 Group:		Archiving/Other
 Requires:	perl, dpkg >= 1.13.26, rpm-build
@@ -35,10 +35,10 @@ it to your preferred package format and install it.
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 perl -pi -e 's/: :\s*extra_/:: extra_/' Makefile
 
-%make
+%make_build
 
 %install
-%makeinstall_std VARPREFIX=%buildroot PREFIX=%buildroot%_prefix
+%make_install VARPREFIX=%buildroot PREFIX=%buildroot%_prefix
 
 %files 
 %{_bindir}/*
