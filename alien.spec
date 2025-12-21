@@ -7,6 +7,7 @@ Source0:	https://ftp.debian.org/debian/pool/main/a/alien/%{name}_%{version}.tar.
 License:	GPLv2+
 Group:		Archiving/Other
 Requires:	perl, dpkg >= 1.13.26, rpm-build
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildArch:	noarch
 
